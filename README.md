@@ -1,6 +1,8 @@
-# 高精度離岸流予測システムRiCAS - API
+# cosmosdb for table 操作API
 ## 概要
-離岸流を予測するシステムのIoTデバイスにあるセンサ情報をRiCAS cosmosdb for tableにデータを挿入、抽出するAPI
+WiCON2023 RiCASのIoTデバイスにあるセンサ情報をcosmosdb for tableにデータを挿入、抽出する用に作成したAPI  
+またDCON2023 CANDIにて本APIを流用した  
+リクエストbodyの定義、変数"Entity",変数"Query"を変更することで移植可能
 
 ## 環境
 ### 使用モジュール
@@ -23,7 +25,3 @@ pip install uvicorn
 ```bash
 uvicorn cosmosdb_api:app --host 0.0.0.0 --port 80
 ```
-
-## 他のプロジェクトでも使用可能
-DCON2023 CANDIにて本APIを流用した  
-リクエストbodyの定義、変数"Entity",変数"Query"を変更することで移植可能
